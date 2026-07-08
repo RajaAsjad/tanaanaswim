@@ -1,8 +1,9 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Ruler, CheckCircle, HelpCircle } from "lucide-react";
+import { images } from "@/data/store";
 
 export const metadata = {
   title: "Fit Guide",
@@ -24,7 +25,7 @@ const fitSteps = [
   {
     title: "Choose Your Size",
     description:
-      "Use your standard dress size as a starting point. Our compressive fabric provides support—if between sizes, size up for comfort.",
+      "Use your standard dress size as a starting point. Our compressive fabric provides support. If between sizes, size up for comfort.",
   },
 ];
 
@@ -53,8 +54,8 @@ export default function FitGuidePage() {
   return (
     <>
       <section className="relative h-64 lg:h-80">
-        <Image
-          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80"
+        <SafeImage
+          src={images.fitGuideHero}
           alt="Fit Guide"
           fill
           priority
@@ -67,7 +68,7 @@ export default function FitGuidePage() {
             Fit Guide
           </h1>
           <p className="text-white/80 max-w-lg">
-            Long Torso vs Regular Torso—find the fit that works for your body.
+            Long Torso vs Regular Torso. Find the fit that works for your body.
           </p>
         </Container>
       </section>

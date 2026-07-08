@@ -1,5 +1,6 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Container from "@/components/ui/Container";
+import { images } from "@/data/store";
 
 export default function PressFeature() {
   return (
@@ -12,12 +13,12 @@ export default function PressFeature() {
           <h2 className="font-serif text-2xl lg:text-3xl text-ocean">
             Denver Fashion Week
           </h2>
-          <div className="relative w-32 h-16 opacity-60">
-            <Image
-              src="https://images.unsplash.com/photo-1558176289-4cbbf7a0b122?w=200&q=80"
+          <div className="relative w-32 h-16 overflow-hidden rounded">
+            <SafeImage
+              src={images.pressFeature}
               alt="Denver Fashion Week"
               fill
-              className="object-contain grayscale"
+              className="object-cover grayscale"
               sizes="128px"
             />
           </div>

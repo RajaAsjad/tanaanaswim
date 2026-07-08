@@ -3,6 +3,12 @@ import productsData from "./products.json";
 
 const CDN = "https://cdn.shopify.com/s/files/1/0742/4330/9803";
 
+export const images = {
+  waterSafetyHero: `${CDN}/files/little_girls_water_safety_color_swimsuit_biker_shorts_and_long_sleeve_top_pink_punch.jpg?v=1758555676`,
+  fitGuideHero: `${CDN}/collections/MAT_3212_e4ad0ee6-9e1c-4d4a-a1ac-4933ebc29ca9.jpg?v=1781467324`,
+  pressFeature: `${CDN}/files/DFWbyWestonMosburg105362.jpg?v=1778604293`,
+};
+
 export const collections: Collection[] = [
   {
     slug: "womens",
@@ -92,7 +98,7 @@ export const reviews: Review[] = [
     date: "04/18/2026",
     rating: 5,
     title: "Stylish Western Beach Hat",
-    body: "I've been loving this Western Beach Hat with Turquoise from TANA ANA—such a fun, stylish piece for summer with great sun protection.",
+    body: "I've been loving this Western Beach Hat with Turquoise from TANA ANA. Such a fun, stylish piece for summer with great sun protection.",
     productName: "Coastal Cowgirl Beach Hat w/ Turquoise",
   },
 ];
@@ -110,9 +116,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     date: "May 15, 2026",
     content: [
-      "Summer means pool parties, lake days, and beach vacations—but before your kids dive in, water safety should be top of mind.",
+      "Summer means pool parties, lake days, and beach vacations, but before your kids dive in, water safety should be top of mind.",
       "Always assign a designated water watcher when children are swimming. This person should avoid distractions like phones and focus entirely on the kids in the water.",
-      "Choose highly visible swimwear colors. Bright yellows, corals, and neon tones make it easier to spot your child—one reason TANA ANA prioritizes safety colors in our children's collection.",
+      "Choose highly visible swimwear colors. Bright yellows, corals, and neon tones make it easier to spot your child, one reason TANA ANA prioritizes safety colors in our children's collection.",
       "Enroll children in swim lessons appropriate for their age and skill level.",
       "Teach kids to never swim alone and to always ask permission before entering the water.",
     ],
@@ -179,7 +185,7 @@ export const siteContent = {
     "TANA ANA swimwear is designed for an incredible fit, offering both regular and long torso options. Our compressive fabric smooths and supports while keeping everything in place, so you can move with confidence!",
   founderQuote: {
     part1:
-      "I started this brand out of frustration—I couldn't find a one-piece swimsuit that stayed in place, looked stylish and fun, felt functional, and didn't cost a fortune.",
+      "I started this brand out of frustration. I couldn't find a one-piece swimsuit that stayed in place, looked stylish and fun, felt functional, and didn't cost a fortune.",
     part2:
       "With over 15 years of competitive swimming experience, I know firsthand the confidence that comes from a swimsuit that fits and performs well. I've always loved one-pieces, and when I set out to create my own, I knew I wanted them to do more than just look good.",
   },
@@ -187,9 +193,9 @@ export const siteContent = {
 
 Swimming has been a part of my life since I was 11 years old, and for over a decade, I lived the life of a competitive swimmer. I had the honor of competing at the collegiate level for four years.
 
-The name TANA ANA comes from two of my nieces — my second oldest calls me "Tana," and my youngest niece calls me "Ana." The combination captures the fun, carefree, and playful spirit that I want my brand to embody.
+The name TANA ANA comes from two of my nieces. My second oldest calls me "Tana," and my youngest niece calls me "Ana." The combination captures the fun, carefree, and playful spirit that I want my brand to embody.
 
-I believe swimsuits should empower you to feel confident, comfortable, and stylish — whether you're diving into the deep end or simply soaking up the sun.`,
+I believe swimsuits should empower you to feel confident, comfortable, and stylish, whether you're diving into the deep end or simply soaking up the sun.`,
 };
 
 export function getProductBySlug(slug: string): Product | undefined {

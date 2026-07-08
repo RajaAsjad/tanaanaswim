@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TANA ANA Swimwear",
     description:
-      "Premium fit, family matching, and water safety—swimwear designed with purpose.",
+      "Premium fit, family matching, and water safety. Swimwear designed with purpose.",
     url: "https://tanaanaswim.com",
     siteName: "TANA ANA Swimwear",
     type: "website",

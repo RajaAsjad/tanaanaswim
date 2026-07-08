@@ -1,7 +1,7 @@
 import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
-import { blogPosts } from "@/data/store";
+import { blogPosts, images } from "@/data/store";
 
 export const metadata = {
   title: "Water Safety",
@@ -14,7 +14,7 @@ export default function WaterSafetyPage() {
     <>
       <section className="relative h-64 lg:h-80">
         <SafeImage
-          src="https://images.unsplash.com/photo-1505118380757-91f5eb962245?w=1600&q=80"
+          src={images.waterSafetyHero}
           alt="Water Safety"
           fill
           priority
@@ -27,7 +27,7 @@ export default function WaterSafetyPage() {
             Water Safety
           </h1>
           <p className="text-white/80 max-w-lg">
-            Keeping families safe around water—because style should never
+            Keeping families safe around water because style should never
             compromise safety.
           </p>
         </Container>
@@ -43,7 +43,7 @@ export default function WaterSafetyPage() {
               TANA ANA children&apos;s swimwear features highly visible colors
               specifically chosen for water safety. Bright yellows, corals, and
               neon tones make it significantly easier to spot your child in
-              crowded pools, lakes, and beaches—giving you peace of mind while
+              crowded pools, lakes, and beaches, giving you peace of mind while
               they play.
             </p>
           </div>

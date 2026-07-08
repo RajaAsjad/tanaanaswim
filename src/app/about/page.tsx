@@ -6,7 +6,7 @@ import { siteContent } from "@/data/store";
 export const metadata = {
   title: "About Us",
   description:
-    "Meet Tiana, founder of TANA ANA Swimwear — premium fit, family matching, and water safety born from 15+ years of competitive swimming.",
+    "Meet Tiana, founder of TANA ANA Swimwear. Premium fit, family matching, and water safety born from 15+ years of competitive swimming.",
 };
 
 export default function AboutPage() {

@@ -12,7 +12,7 @@ const pillars = [
     icon: Users,
     title: "Family Matching",
     description:
-      "Mommy & Me collections designed to coordinate beautifully—because family memories deserve matching style.",
+      "Mommy & Me collections designed to coordinate beautifully because family memories deserve matching style.",
   },
   {
     icon: Shield,

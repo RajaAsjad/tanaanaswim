@@ -38,13 +38,23 @@ function getCategory(p) {
   return "accessories";
 }
 
-function stripHtml(html) {
-  return (html || "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
+function cleanText(text) {
+  return (text || "")
+    .replace(/\s*—\s*/g, ", ")
+    .replace(/\s*–\s*/g, ", ")
+    .replace(/,\s*,/g, ",")
     .trim();
+}
+
+function stripHtml(html) {
+  return cleanText(
+    (html || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&nbsp;/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
 }
 
 const products = raw.products
