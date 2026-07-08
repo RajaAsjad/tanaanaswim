@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Container from "@/components/ui/Container";
 import ProductCard from "@/components/product/ProductCard";
 import ProductFilters from "@/components/product/ProductFilters";
@@ -24,7 +24,7 @@ export default function CollectionPageClient({
   return (
     <>
       <section className="relative h-44 sm:h-56 lg:h-72">
-        <Image
+        <SafeImage
           src={
             collection?.heroImage ||
             "https://cdn.shopify.com/s/files/1/0742/4330/9803/collections/MAT_3212_e4ad0ee6-9e1c-4d4a-a1ac-4933ebc29ca9.jpg?v=1781467324"

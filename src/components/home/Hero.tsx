@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { siteContent } from "@/data/store";
@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[75vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-end sm:items-center">
-      <Image
+      <SafeImage
         src={hero.image}
         alt="TANA ANA Americana Collection - Match with Mini"
         fill

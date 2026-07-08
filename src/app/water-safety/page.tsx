@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { blogPosts } from "@/data/store";
@@ -13,7 +13,7 @@ export default function WaterSafetyPage() {
   return (
     <>
       <section className="relative h-64 lg:h-80">
-        <Image
+        <SafeImage
           src="https://images.unsplash.com/photo-1505118380757-91f5eb962245?w=1600&q=80"
           alt="Water Safety"
           fill
@@ -63,7 +63,7 @@ export default function WaterSafetyPage() {
                 className="group"
               >
                 <div className="relative aspect-[16/10] overflow-hidden mb-4">
-                  <Image
+                  <SafeImage
                     src={post.image}
                     alt={post.title}
                     fill

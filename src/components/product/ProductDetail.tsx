@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import { Star, Truck, Shield, RotateCcw, Check } from "lucide-react";
 import { Product } from "@/types";
 import { useCart } from "@/context/CartContext";
@@ -47,7 +47,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
       <div>
         <div className="relative aspect-[3/4] overflow-hidden bg-sand mb-4">
-          <Image
+          <SafeImage
             src={product.images[selectedImage]}
             alt={product.name}
             fill
@@ -71,7 +71,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                   selectedImage === i ? "border-ocean" : "border-transparent"
                 }`}
               >
-                <Image src={img} alt="" fill className="object-cover" sizes="80px" />
+                <SafeImage src={img} alt="" fill className="object-cover" sizes="80px" />
               </button>
             ))}
           </div>

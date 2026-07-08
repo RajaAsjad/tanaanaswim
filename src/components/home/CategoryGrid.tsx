@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { collections } from "@/data/store";
@@ -22,7 +22,7 @@ export default function CategoryGrid() {
               href={`/collections/${collection.slug}`}
               className="group relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden block"
             >
-              <Image
+              <SafeImage
                 src={collection.image}
                 alt={collection.name}
                 fill

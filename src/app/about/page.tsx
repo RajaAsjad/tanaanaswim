@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { siteContent } from "@/data/store";
@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative h-56 sm:h-72 lg:h-96">
-        <Image
+        <SafeImage
           src="https://cdn.shopify.com/s/files/1/0742/4330/9803/collections/MAT_3212_e4ad0ee6-9e1c-4d4a-a1ac-4933ebc29ca9.jpg?v=1781467324"
           alt="About TANA ANA"
           fill
@@ -35,7 +35,7 @@ export default function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start max-w-5xl mx-auto">
             <div className="relative aspect-[4/5] overflow-hidden max-w-sm mx-auto lg:max-w-none w-full">
-              <Image
+              <SafeImage
                 src="https://cdn.shopify.com/s/files/1/0742/4330/9803/files/TANA_0514_1.jpg?v=1760915247"
                 alt="Tiana, founder of TANA ANA"
                 fill

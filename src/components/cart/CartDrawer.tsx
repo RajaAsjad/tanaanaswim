@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import { X, Minus, Plus, Trash2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -48,7 +48,7 @@ export default function CartDrawer() {
               {items.map((item, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="relative w-20 h-24 flex-shrink-0 bg-sand">
-                    <Image
+                    <SafeImage
                       src={item.image}
                       alt={item.name}
                       fill

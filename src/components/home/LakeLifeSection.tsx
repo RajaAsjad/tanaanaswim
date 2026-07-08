@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { siteContent } from "@/data/store";
@@ -8,7 +8,7 @@ export default function LakeLifeSection() {
 
   return (
     <section className="relative min-h-[400px] sm:min-h-[500px] flex items-center">
-      <Image
+      <SafeImage
         src={lakeLife.image}
         alt="Bold bright swimwear built for lake life"
         fill

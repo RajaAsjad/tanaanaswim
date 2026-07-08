@@ -104,7 +104,8 @@ export const blogPosts: BlogPost[] = [
       "Water Safety for Kids: What Every Parent Should Teach Before Summer Swim Season",
     excerpt:
       "Learn essential water safety tips for kids before summer. Help your child stay safe and confident around pools, lakes, and beaches.",
-    image: `${CDN}/files/little_girls_water_safety_swimwear.jpg?v=1748960570`,
+    image:
+      "https://tanaanaswim.com/cdn/shop/articles/april_2026_blog.png?v=1775922376",
     category: "Water Safety",
     readTime: "5 min read",
     date: "May 15, 2026",
@@ -122,7 +123,8 @@ export const blogPosts: BlogPost[] = [
       "Cold Water Safety: Why Lakes & Rivers Are More Dangerous In The Spring",
     excerpt:
       "Spring water can be colder and stronger than it looks. Learn cold water safety tips and how to stay safe around lakes and rivers this spring.",
-    image: "https://images.unsplash.com/photo-1439854516164-0abcd1234567?w=800&q=80",
+    image:
+      "https://tanaanaswim.com/cdn/shop/articles/march_water_safety.png?v=1772997331",
     category: "Water Safety",
     readTime: "4 min read",
     date: "April 22, 2026",
@@ -139,7 +141,8 @@ export const blogPosts: BlogPost[] = [
       "Rip Current Safety 101: How to Spot One and What to Do If You're Caught",
     excerpt:
       "Understanding rip current safety is essential for beach days. Learn how to identify rip currents and survive if caught in one.",
-    image: "https://images.unsplash.com/photo-1505118380757-91f5eb962245?w=800&q=80",
+    image:
+      "https://tanaanaswim.com/cdn/shop/articles/TANA_0631_1_c2907151-3614-4406-96b5-b111c5983e03.jpg?v=1772999324",
     category: "Water Safety",
     readTime: "6 min read",
     date: "March 10, 2026",
@@ -170,7 +173,7 @@ export const siteContent = {
     title: "BOLD. BRIGHT. BUILT FOR LAKE LIFE.",
     cta: "Shop Now",
     ctaLink: "/collections/childrens",
-    image: `${CDN}/files/little_girls_water_safety_swimwear.jpg?v=1748960570`,
+    image: `${CDN}/files/little_girls_water_safety_color_swimsuit_biker_shorts_and_long_sleeve_top_coral_cover.jpg?v=1758555429`,
   },
   fitTagline:
     "TANA ANA swimwear is designed for an incredible fit, offering both regular and long torso options. Our compressive fabric smooths and supports while keeping everything in place, so you can move with confidence!",

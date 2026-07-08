@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { siteContent } from "@/data/store";
@@ -11,7 +11,7 @@ export default function DenverFashionWeek() {
       <Container className="py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           <div className="relative aspect-square lg:aspect-auto lg:min-h-[500px] order-2 lg:order-1">
-            <Image
+            <SafeImage
               src={denverFashionWeek.image}
               alt="Denver Fashion Week - TANA ANA Swimwear"
               fill

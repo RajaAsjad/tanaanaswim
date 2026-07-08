@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { Product } from "@/types";
@@ -14,7 +14,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <Link href={`/products/${product.slug}`} className="group block">
       <div className="relative aspect-[3/4] overflow-hidden bg-sand mb-3 sm:mb-4">
         {product.images[0] ? (
-          <Image
+          <SafeImage
             src={product.images[0]}
             alt={product.name}
             fill

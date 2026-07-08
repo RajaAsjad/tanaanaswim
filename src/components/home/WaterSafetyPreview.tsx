@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import SafeImage from "@/components/ui/SafeImage";
 import { blogPosts } from "@/data/store";
 
 export default function WaterSafetyPreview() {
@@ -27,7 +27,7 @@ export default function WaterSafetyPreview() {
               className="group block"
             >
               <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-sand">
-                <Image
+                <SafeImage
                   src={post.image}
                   alt={post.title}
                   fill

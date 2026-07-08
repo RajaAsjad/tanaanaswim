@@ -106,7 +106,13 @@ const products = raw.products
       torsoOptions: [...new Set(torsoOptions)],
       sizes: [...new Set(sizes)].slice(0, 12),
       colors,
-      images: p.images.map((i) => i.src),
+      images: p.images
+      .map((i) => i.src)
+      .filter(
+        (src) =>
+          !src.toLowerCase().includes(".heic") &&
+          !src.toLowerCase().includes(".heif")
+      ),
       badge: tags.includes("qualifying-swimsuit")
         ? "Bestseller"
         : tags.some((t) => t.includes("water safety"))

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { siteContent } from "@/data/store";
@@ -11,7 +11,7 @@ export default function BrandStory() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           <div className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none w-full overflow-hidden">
-            <Image
+            <SafeImage
               src="https://cdn.shopify.com/s/files/1/0742/4330/9803/files/TANA_0489_1.jpg?v=1760914594"
               alt="TANA ANA founder Tiana"
               fill

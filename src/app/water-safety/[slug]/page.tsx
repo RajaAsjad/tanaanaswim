@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -28,7 +28,7 @@ export default async function WaterSafetyArticlePage({ params }: PageProps) {
   return (
     <>
       <section className="relative h-64 lg:h-80">
-        <Image
+        <SafeImage
           src={post.image}
           alt={post.title}
           fill
