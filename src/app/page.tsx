@@ -1,11 +1,11 @@
 import Hero from "@/components/home/Hero";
 import CategoryGrid from "@/components/home/CategoryGrid";
-import ValueProps from "@/components/home/ValueProps";
-import FeaturedProducts from "@/components/home/FeaturedProducts";
-import BrandStory from "@/components/home/BrandStory";
-import PressFeature from "@/components/home/PressFeature";
-import ReviewsSection from "@/components/home/ReviewsSection";
+import DenverFashionWeek from "@/components/home/DenverFashionWeek";
 import WaterSafetyPreview from "@/components/home/WaterSafetyPreview";
+import BrandStory from "@/components/home/BrandStory";
+import LakeLifeSection from "@/components/home/LakeLifeSection";
+import ReviewsSection from "@/components/home/ReviewsSection";
+import FitTagline from "@/components/home/FitTagline";
 import NewsletterSignup from "@/components/home/NewsletterSignup";
 
 export default function HomePage() {
@@ -13,12 +13,12 @@ export default function HomePage() {
     <>
       <Hero />
       <CategoryGrid />
-      <ValueProps />
-      <FeaturedProducts />
-      <PressFeature />
-      <BrandStory />
-      <ReviewsSection />
+      <DenverFashionWeek />
       <WaterSafetyPreview />
+      <BrandStory />
+      <LakeLifeSection />
+      <ReviewsSection />
+      <FitTagline />
       <NewsletterSignup />
     </>
   );

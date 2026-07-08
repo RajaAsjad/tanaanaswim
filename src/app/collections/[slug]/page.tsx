@@ -15,6 +15,7 @@ export async function generateStaticParams() {
     { slug: "womens" },
     { slug: "childrens" },
     { slug: "accessories" },
+    { slug: "matching-mommy-mini" },
     { slug: "all" },
   ];
 }

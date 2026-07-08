@@ -1,118 +1,73 @@
 import Image from "next/image";
-import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Container from "@/components/ui/Container";
+import { siteContent } from "@/data/store";
 
 export const metadata = {
   title: "About Us",
   description:
-    "Learn about TANA ANA Swimwear—premium fit, family matching, and water safety born from 15+ years of competitive swimming experience.",
+    "Meet Tiana, founder of TANA ANA Swimwear — premium fit, family matching, and water safety born from 15+ years of competitive swimming.",
 };
 
 export default function AboutPage() {
+  const paragraphs = siteContent.aboutStory.split("\n\n");
+
   return (
     <>
-      <section className="relative h-64 lg:h-96">
+      <section className="relative h-56 sm:h-72 lg:h-96">
         <Image
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+          src="https://cdn.shopify.com/s/files/1/0742/4330/9803/collections/MAT_3212_e4ad0ee6-9e1c-4d4a-a1ac-4933ebc29ca9.jpg?v=1781467324"
           alt="About TANA ANA"
           fill
           priority
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-ocean/60" />
+        <div className="absolute inset-0 bg-ocean/55" />
         <Container className="relative h-full flex flex-col justify-center">
-          <h1 className="font-serif text-4xl lg:text-5xl text-white mb-3">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-wide">
             About TANA ANA
           </h1>
-          <p className="text-white/80 max-w-lg">
-            Premium swimwear designed with purpose, built from experience.
-          </p>
         </Container>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="section-padding">
         <Container>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-3xl text-ocean mb-6">
-              Built From Frustration, Designed With Purpose
-            </h2>
-            <div className="prose prose-lg text-charcoal-light space-y-6 leading-relaxed">
-              <p>
-                TANA ANA was born from a simple frustration: the inability to
-                find a one-piece swimsuit that stayed in place, looked stylish,
-                felt functional, and didn&apos;t cost a fortune.
-              </p>
-              <p>
-                With over 15 years of competitive swimming experience, our
-                founder knows firsthand the confidence that comes from a
-                swimsuit that fits and performs well. That expertise drives
-                every design decision—from our compressive fabric that smooths
-                and supports, to our Long Torso and Regular Torso options that
-                ensure every body finds its perfect fit.
-              </p>
-              <p>
-                But TANA ANA is about more than great-fitting swimwear. We
-                believe in family matching collections that create lasting
-                memories, and we&apos;re passionate about children&apos;s water
-                safety through highly visible swimwear colors that help parents
-                spot their kids instantly at the pool or beach.
-              </p>
-              <p>
-                Every piece is designed to do more than just look good—it needs
-                to perform when you&apos;re chasing your littles at the pool,
-                building sandcastles at the beach, or simply enjoying a
-                confidence-boosting day in the sun.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start max-w-5xl mx-auto">
+            <div className="relative aspect-[4/5] overflow-hidden max-w-sm mx-auto lg:max-w-none w-full">
+              <Image
+                src="https://cdn.shopify.com/s/files/1/0742/4330/9803/files/TANA_0514_1.jpg?v=1760915247"
+                alt="Tiana, founder of TANA ANA"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 80vw, 40vw"
+              />
+            </div>
+            <div className="space-y-5 text-charcoal-light text-sm sm:text-base leading-relaxed">
+              {paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+              <p className="text-ocean font-medium pt-2">xoxo, Tiana</p>
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-16 bg-sand">
+      <section className="section-padding bg-sand">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <div>
-              <p className="font-serif text-4xl text-ocean mb-2">15+</p>
-              <p className="text-sm text-charcoal-light">
-                Years of competitive swimming experience
-              </p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-ocean mb-2">108+</p>
-              <p className="text-sm text-charcoal-light">
-                Five-star customer reviews
-              </p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-ocean mb-2">3</p>
-              <p className="text-sm text-charcoal-light">
-                Core pillars: Fit, Family, Safety
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="text-center max-w-xl mx-auto">
-            <h2 className="font-serif text-3xl text-ocean mb-4">
-              Ready to Find Your Perfect Fit?
+          <div className="text-center max-w-lg mx-auto">
+            <h2 className="font-serif text-2xl sm:text-3xl text-ocean mb-4">
+              Find Your Perfect Fit
             </h2>
-            <p className="text-charcoal-light mb-8">
-              Explore our collections and discover swimwear that moves with
-              confidence.
+            <p className="text-charcoal-light text-sm mb-6">
+              Long Torso &amp; Regular Torso options for every body.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/collections/womens">
-                <Button size="lg">Shop Women&apos;s</Button>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link href="/collections/womens" className="inline-flex items-center justify-center px-8 py-3.5 bg-ocean text-white text-xs tracking-[0.15em] uppercase hover:bg-ocean-dark transition-colors">
+                Shop Women&apos;s
               </Link>
-              <Link href="/fit-guide">
-                <Button size="lg" variant="outline">
-                  Read Fit Guide
-                </Button>
+              <Link href="/fit-guide" className="inline-flex items-center justify-center px-8 py-3.5 border border-ocean text-ocean text-xs tracking-[0.15em] uppercase hover:bg-ocean hover:text-white transition-colors">
+                Fit Guide
               </Link>
             </div>
           </div>

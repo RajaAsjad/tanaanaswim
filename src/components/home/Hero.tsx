@@ -1,42 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import { siteContent } from "@/data/store";
 
 export default function Hero() {
+  const { hero } = siteContent;
+
   return (
-    <section className="relative min-h-[70vh] lg:min-h-[85vh] flex items-center">
+    <section className="relative min-h-[75vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-end sm:items-center">
       <Image
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80"
-        alt="Family at the beach wearing TANA ANA swimwear"
+        src={hero.image}
+        alt="TANA ANA Americana Collection - Match with Mini"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-ocean/70 via-ocean/40 to-transparent" />
-      <Container className="relative z-10 py-20">
-        <div className="max-w-xl">
-          <p className="text-white/80 text-xs sm:text-sm tracking-[0.3em] uppercase mb-4">
-            Premium Fit &bull; Family Matching &bull; Water Safety
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-            Swimwear That Moves With Confidence
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 sm:bg-gradient-to-r sm:from-black/60 sm:via-black/25 sm:to-transparent" />
+      <Container className="relative z-10 pb-10 sm:pb-0 py-8 sm:py-20 w-full">
+        <div className="max-w-lg mx-auto sm:mx-0 text-center sm:text-left">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.15] mb-6 sm:mb-8 tracking-wide">
+            {hero.title}
           </h1>
-          <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-            Long Torso &amp; Regular Torso options. Compressive fabric that
-            stays in place. Highly visible colors for kids.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/collections/womens">
-              <Button size="lg">Shop Women&apos;s</Button>
-            </Link>
-            <Link href="/collections/childrens">
-              <Button size="lg" variant="outline" className="!border-white !text-white hover:!bg-white hover:!text-ocean">
-                Shop Children&apos;s
-              </Button>
-            </Link>
-          </div>
+          <Link
+            href={hero.ctaLink}
+            className="inline-flex items-center justify-center px-10 py-4 bg-white text-ocean text-sm font-medium tracking-[0.2em] uppercase hover:bg-sand transition-colors min-w-[200px]"
+          >
+            {hero.cta}
+          </Link>
         </div>
       </Container>
     </section>

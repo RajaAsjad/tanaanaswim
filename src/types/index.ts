@@ -32,6 +32,8 @@ export interface Product {
   isBestseller?: boolean;
   isNew?: boolean;
   safetyHighlight?: string;
+  shopifyUrl?: string;
+  tags?: string[];
 }
 
 export interface Collection {

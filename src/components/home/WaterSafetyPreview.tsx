@@ -5,48 +5,40 @@ import { blogPosts } from "@/data/store";
 
 export default function WaterSafetyPreview() {
   return (
-    <section className="py-16 lg:py-24 bg-ocean">
+    <section className="section-padding bg-white">
       <Container>
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
-          <div>
-            <h2 className="font-serif text-3xl lg:text-4xl text-white mb-2">
-              Water Safety Blog
-            </h2>
-            <p className="text-white/70 text-sm max-w-md">
-              Essential tips to keep your family safe around water this season.
-            </p>
-          </div>
+        <div className="flex items-end justify-between mb-8 sm:mb-10 gap-4">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-ocean tracking-wide">
+            Water Safety Blog
+          </h2>
           <Link
             href="/water-safety"
-            className="text-sm tracking-widest uppercase text-white/80 border-b border-white/40 pb-0.5 hover:text-white hover:border-white transition-colors"
+            className="text-xs sm:text-sm tracking-[0.15em] uppercase text-ocean border-b border-ocean/40 pb-0.5 hover:border-ocean whitespace-nowrap flex-shrink-0"
           >
-            View All
+            View all
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {blogPosts.map((post) => (
             <Link
               key={post.slug}
               href={`/water-safety/${post.slug}`}
-              className="group"
+              className="group block"
             >
-              <div className="relative aspect-[16/10] overflow-hidden mb-4">
+              <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-sand">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <p className="text-xs tracking-widest uppercase text-coral mb-2">
-                {post.category}
-              </p>
-              <h3 className="text-white font-medium leading-snug group-hover:underline">
+              <h3 className="text-sm sm:text-base font-medium text-charcoal leading-snug group-hover:text-ocean transition-colors line-clamp-2 mb-2">
                 {post.title}
               </h3>
-              <p className="text-white/60 text-sm mt-2 line-clamp-2">
+              <p className="text-xs sm:text-sm text-charcoal-light line-clamp-2">
                 {post.excerpt}
               </p>
             </Link>

@@ -193,7 +193,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           fullWidth
           size="lg"
           onClick={handleAddToCart}
-          className="mb-6"
+          className="mb-3"
         >
           {added ? (
             <span className="flex items-center gap-2">
@@ -203,6 +203,17 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             "Add to Cart"
           )}
         </Button>
+
+        {product.shopifyUrl && (
+          <a
+            href={product.shopifyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center py-3.5 border border-ocean text-ocean text-xs tracking-[0.15em] uppercase hover:bg-ocean hover:text-white transition-colors mb-6"
+          >
+            Buy on TANA ANA Store
+          </a>
+        )}
 
         <ul className="space-y-3 mb-8">
           {product.features.map((feature) => (
