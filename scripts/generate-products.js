@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+const CDN = "https://cdn.shopify.com/s/files/1/0742/4330/9803";
 const rawPath =
   "C:/Users/User/.cursor/projects/e-xampp-htdocs-tanaanaswim/agent-tools/c7bc2ed3-15ba-4f68-842e-2a2a7078f78f.txt";
 const outPath = path.join(__dirname, "../src/data/products.json");
@@ -91,6 +92,20 @@ const products = raw.products
 
     const desc = stripHtml(p.body_html) || p.title;
 
+    const rawImages = p.images
+      .map((i) => i.src)
+      .filter(
+        (src) =>
+          !src.toLowerCase().includes(".heic") &&
+          !src.toLowerCase().includes(".heif")
+      );
+    const images =
+      rawImages.length > 0
+        ? rawImages
+        : p.images.length > 0
+          ? [p.images[0].src]
+          : [`${CDN}/collections/MAT_6963_1.jpg?v=1781467357`];
+
     return {
       id: String(p.id),
       slug: p.handle,
@@ -106,13 +121,7 @@ const products = raw.products
       torsoOptions: [...new Set(torsoOptions)],
       sizes: [...new Set(sizes)].slice(0, 12),
       colors,
-      images: p.images
-      .map((i) => i.src)
-      .filter(
-        (src) =>
-          !src.toLowerCase().includes(".heic") &&
-          !src.toLowerCase().includes(".heif")
-      ),
+      images,
       badge: tags.includes("qualifying-swimsuit")
         ? "Bestseller"
         : tags.some((t) => t.includes("water safety"))

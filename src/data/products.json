@@ -110,7 +110,9 @@
         "hex": "#1B3A4B"
       }
     ],
-    "images": [],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0742/4330/9803/files/IMG-7061.heic?v=1781966676"
+    ],
     "rating": 4.9,
     "reviewCount": 108,
     "isBestseller": false,
@@ -194,7 +196,9 @@
         "hex": "#1B3A4B"
       }
     ],
-    "images": [],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0742/4330/9803/collections/MAT_6963_1.jpg?v=1781467357"
+    ],
     "rating": 4.9,
     "reviewCount": 108,
     "isBestseller": false,

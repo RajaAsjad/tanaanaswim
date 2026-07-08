@@ -173,7 +173,7 @@ export const siteContent = {
     title: "BOLD. BRIGHT. BUILT FOR LAKE LIFE.",
     cta: "Shop Now",
     ctaLink: "/collections/childrens",
-    image: `${CDN}/files/little_girls_water_safety_color_swimsuit_biker_shorts_and_long_sleeve_top_coral_cover.jpg?v=1758555429`,
+    image: `${CDN}/files/little_girls_water_safety_color_swimsuit_biker_shorts_and_long_sleeve_top_coral_cove.jpg?v=1758552429`,
   },
   fitTagline:
     "TANA ANA swimwear is designed for an incredible fit, offering both regular and long torso options. Our compressive fabric smooths and supports while keeping everything in place, so you can move with confidence!",
